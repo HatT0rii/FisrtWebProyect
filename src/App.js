@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css'
+import Navbar from './components/Navbar'
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Home from './components/Pages/Home';
+import Signup from './components/Pages/SignUp';
+import Producto from './components/Pages/Producto';
+import Carrito from './components/Pages/Carrito';
+import Bebidas from './components/Pages/Bebidas';
+import Dulces from './components/Pages/Dulces';
+import Fibras from './components/Pages/Fibras';
+import Footer from './components/Footer';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar/>
+      <Switch>
+        <Route path='/' exact component={Home} />
+        <Route path='/producto'component={Producto} />
+        <Route path='/sign-up'component={Signup} />
+        <Route path='/carrito'component={Carrito} />
+        <Route path='/bebidas'component={Bebidas} />
+        <Route path='/dulces'component={Dulces} />
+        <Route path='/fibras'component={Fibras} />
+      </Switch>
+      <Footer/>
+    </Router>    
   );
 }
 

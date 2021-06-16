@@ -1,0 +1,130 @@
+.filter{
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: 25px auto;
+    padding: 10px 0;
+}
+
+.filter-box{
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: 15px auto;
+    padding: 15px 5px;
+    display: flex;
+    background-color: rgba(134, 179, 11, 0.555);
+}
+
+.tags {
+    width: 100%;
+    max-width: 180px;
+	padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tag{
+	outline: none;
+	border: none;
+	color: rgb(114, 248, 121);
+	margin: 10px 15px;
+	background-color: transparent;
+	cursor: pointer;
+    font-size: 18px;
+}
+
+.active {
+    font-size: 22px;
+	font-weight: bold;
+    color: rgb(18, 148, 6);
+}
+
+.container {
+	width: 85%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(210px, 1fr));
+	gap: 15px 24px;
+    height: auto;
+    padding: 15px 5px;
+}
+
+.image-card {
+	padding: 18px 6px;
+	margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image {
+	width: 100%;
+    max-width: 250px;
+    height: 270px;
+    object-fit: cover;
+}
+
+.card-botton{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 13px 0;
+}
+
+.description{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.btn-shop{
+    width: 70%;
+    padding: 10px 0;
+    text-align: center;
+    background-color: rgb(30, 197, 39);
+    border-radius: 25px;
+}
+.btn-shop button{
+    outline: none;
+	border: none;
+    color: rgb(255, 255, 255);
+	margin: 10px 15px;
+	background-color:transparent ;
+	cursor: pointer;
+    font-size: 15px;
+}
+
+.btn-shop:hover{
+    background-color: rgb(3, 102, 16);
+}
+
+
+@media (max-width: 1000px){
+    .container{
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    .description{
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 800px){
+    .filter-box{
+        display: flex;
+        flex-direction: column;
+    }
+    .tags{
+        width: 100%;
+        max-width: none;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .tag{
+        margin: 5px 0;
+    }
+}

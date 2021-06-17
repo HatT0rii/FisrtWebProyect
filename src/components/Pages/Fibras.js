@@ -1,8 +1,9 @@
 import React,{useEffect, useState} from 'react'
 import Fiber from '../asset/Fiber';
-import '../Filter.css'
+import '../Filter.css';
+import Fade from 'react-reveal/Fade';
 
-function Fibras() {
+function Fibras() { 
 
     const [tag, setTag] = useState('all');
 	const [filteredImages, setFilteredImages] = useState([]);
@@ -14,6 +15,18 @@ function Fibras() {
 		[tag]
 	);
 
+    const [cardItems, setCardImages] = useState([]);
+
+    const onAdd = (Fiber) =>{
+        const exist = cardItems.find(x => x.N === Fiber.N);
+        if(exist){
+            setCardImages(cardItems.map(x => x.N === Fiber.N ? {...exist, qty: exist.qty +1}: x )
+            );
+        } else{
+            setCardImages([...cardItems,{...Fiber,qty: 1}]);
+        }
+    };
+
     return (
         <div className='filter'>
             <div className='filter-box'>
@@ -24,7 +37,8 @@ function Fibras() {
                     <TagButton name="Harina" tagActive={tag === 'Harina' ? true : false} handleSetTag={setTag} />
                     <TagButton name="Pan" tagActive={tag === 'Pan' ? true : false} handleSetTag={setTag} />
                 </div>
-                <div className="container">
+                <Fade bottom cascade>
+                    <div className="container">
                         {filteredImages.map(Fiber => (
                             <div key={Fiber.N} className="image-card">
                                 <a href='#'>
@@ -33,16 +47,17 @@ function Fibras() {
                                 <div className='card-botton'>
                                     <div className='description'>
                                         <p>{Fiber.title}</p>
-                                        <p>{Fiber.price}</p>
+                                        <p>S/.{Fiber.price}</p>
                                     </div>
                                     <div className='btn-shop'>
-                                        <button><i class="fas fa-shopping-bag"/> Comprar Ahora</button>
+                                        <button onClick={onAdd}><i class="fas fa-shopping-bag"/> Comprar Ahora</button>
                                     </div>
                                 </div>
                                 
                             </div>
                         ))}
-                </div>
+                    </div>
+                </Fade>
             </div>      
         </div>
     )

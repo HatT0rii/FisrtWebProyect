@@ -34,7 +34,7 @@ function Fibras() {
                                 <div className='card-botton'>
                                     <div className='description'>
                                         <p>{Drink.title}</p>
-                                        <p>{Drink.price}</p>
+                                        <p>S/.{Drink.price}</p>
                                     </div>
                                     <div className='btn-shop'>
                                         <button><i class="fas fa-shopping-bag"/> Comprar Ahora</button>

@@ -79,7 +79,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .btn-shop{
@@ -88,7 +88,9 @@
     text-align: center;
     background-color: rgb(30, 197, 39);
     border-radius: 25px;
+    cursor: pointer;
 }
+
 .btn-shop button{
     outline: none;
 	border: none;

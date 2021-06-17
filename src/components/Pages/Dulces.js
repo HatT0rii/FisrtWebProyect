@@ -32,7 +32,7 @@ function Dulces() {
                                 <div className='card-botton'>
                                     <div className='description'>
                                         <p>{Cookies.Name}</p>
-                                        <p>{Cookies.price}</p>
+                                        <p>S/.{Cookies.price}</p>
                                     </div>
                                     <div className='btn-shop'>
                                         <button><i class="fas fa-shopping-bag"/> Comprar Ahora</button>

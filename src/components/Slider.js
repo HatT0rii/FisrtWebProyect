@@ -45,15 +45,6 @@ function Slider() {
         }
     },500);
 
-    // useEffect(()=>{
-    //     const intervalos= setInterval(()=>{
-    //         after();
-    //     },2000);
-
-    //     slidershow.current.addEventListener('mouseenter', ()=>{
-    //         clearInterval(intervalos);
-    //     });
-    // },[]);
 
     return (
         <main>

@@ -9,7 +9,7 @@ import Categoria3 from './img/Categoria3.jpg';
 
 
 export default[
-    { id:Logo,'title':'logo', },
+    {id:Logo,'title':'logo', },
 
     {id:Portada1,'title': 'portada1', },
 

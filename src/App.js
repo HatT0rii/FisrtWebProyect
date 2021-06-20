@@ -10,6 +10,7 @@ import Bebidas from './components/Pages/Bebidas';
 import Dulces from './components/Pages/Dulces';
 import Fibras from './components/Pages/Fibras';
 import Footer from './components/Footer';
+import {CartProvider} from 'react-use-cart';
 
 
 
@@ -21,10 +22,12 @@ function App() {
         <Route path='/' exact component={Home} />
         <Route path='/producto'component={Producto} />
         <Route path='/sign-up'component={Signup} />
-        <Route path='/carrito'component={Carrito} />
-        <Route path='/bebidas'component={Bebidas} />
-        <Route path='/dulces'component={Dulces} />
-        <Route path='/fibras'component={Fibras} />
+        <CartProvider>
+          <Route path='/carrito'component={Carrito} />
+          <Route path='/bebidas'component={Bebidas} />
+          <Route path='/dulces'component={Dulces} />
+          <Route path='/fibras'component={Fibras} />
+          </CartProvider>
       </Switch>
       <Footer/>
     </Router>    

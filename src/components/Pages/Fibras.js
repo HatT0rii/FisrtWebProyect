@@ -2,9 +2,10 @@ import React,{useEffect, useState} from 'react'
 import Fiber from '../asset/Fiber';
 import '../Filter.css';
 import Fade from 'react-reveal/Fade';
+import {useCart} from 'react-use-cart';
 
-function Fibras() { 
 
+function Fibras() {
     const [tag, setTag] = useState('all');
 	const [filteredImages, setFilteredImages] = useState([]);
 
@@ -15,17 +16,7 @@ function Fibras() {
 		[tag]
 	);
 
-    const [cardItems, setCardImages] = useState([]);
-
-    const onAdd = (Fiber) =>{
-        const exist = cardItems.find(x => x.N === Fiber.N);
-        if(exist){
-            setCardImages(cardItems.map(x => x.N === Fiber.N ? {...exist, qty: exist.qty +1}: x )
-            );
-        } else{
-            setCardImages([...cardItems,{...Fiber,qty: 1}]);
-        }
-    };
+    const{addItem}= useCart();
 
     return (
         <div className='filter'>
@@ -50,10 +41,9 @@ function Fibras() {
                                         <p>S/.{Fiber.price}</p>
                                     </div>
                                     <div className='btn-shop'>
-                                        <button onClick={onAdd}><i class="fas fa-shopping-bag"/> Comprar Ahora</button>
+                                        <button onClick={()=>addItem(Fiber.item)} ><i class="fas fa-shopping-bag"/> Comprar Ahora</button>
                                     </div>
                                 </div>
-                                
                             </div>
                         ))}
                     </div>

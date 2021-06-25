@@ -5,6 +5,7 @@
     margin: 25px auto;
     padding: 20px 0;
     font-size: 28px;
+    color:#fff;
 }
 
 .caja-producto{
@@ -56,8 +57,8 @@
 
 .tipos-p{
     text-decoration: none;
-    color:rgb(4, 221, 15);
-    font-size: 24px;
+    color:rgb(6, 117, 12);
+    font-size: 4.5vh;
     margin: 13px 0;
 
 }

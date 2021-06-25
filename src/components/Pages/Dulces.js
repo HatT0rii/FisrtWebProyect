@@ -2,6 +2,7 @@ import React,{useEffect, useState} from 'react'
 import Cookies from '../asset/Cookies';
 import '../Filter.css'
 import Fade from 'react-reveal/Fade';
+import {useCart} from 'react-use-cart';
 
 function Dulces() {
 
@@ -15,6 +16,8 @@ function Dulces() {
 		[tag]
 	);
 
+    const{addItem}= useCart();
+
     return (
         <div className='filter'>
             <div className='filter-box'>
@@ -27,16 +30,16 @@ function Dulces() {
                 <Fade bottom cascade>
                     <div className="container">
                             {filteredImages.map(Cookies => (
-                                <div key={Cookies.N} className="image-card">
+                                <div key={Cookies.id} className="image-card">
                                     <a href='#'>
-                                        <img loading='lazy' className="image" src={Cookies.id} alt={Cookies.title}/>
+                                        <img loading='lazy' className="image" src={Cookies.img} alt={Cookies.title}/>
                                     </a>
                                     <div className='card-botton'>
                                         <div className='description'>
-                                            <p>{Cookies.Name}</p>
+                                            <p>{Cookies.title}</p>
                                             <p>S/.{Cookies.price}</p>
                                         </div>
-                                        <div className='btn-shop'>
+                                        <div className='btn-shop' onClick={()=>addItem(Cookies)}>
                                             <button><i class="fas fa-shopping-bag"/> Comprar Ahora</button>
                                         </div>
                                     </div>

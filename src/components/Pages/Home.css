@@ -17,6 +17,7 @@
 }
 .title-caja h1{
     padding-top: 6px;
+    color: #fff;
 }
 
 .categoria-caja{
@@ -44,7 +45,7 @@
 }
 
 .sub-link{
-    color: rgb(4, 221, 15);
+    color: rgb(5, 129, 22);
     text-decoration: none;
     width: 120px;
     margin-bottom: 15px;

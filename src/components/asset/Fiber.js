@@ -8,20 +8,20 @@ import Harina from './img/Fibras/harina.jpg'
 import Pans from './img/Fibras/pan integral.jpg'
 
 export default[
-    { id:CerealA, title:'Cereal de Avena', tipo:'Fibras', tag:'Cereal', N:'1',price:10, },
+    { id:1, img: CerealA ,title:'Cereal de Avena', tipo:'Fibras', tag:'Cereal', price:10, },
     
-    { id:Cerealsa, title:'Cereal sin Azucar', tipo:'Fibras', tag:'Cereal', N:'2',price:15, },
+    { id:2, img: Cerealsa ,title:'Cereal sin Azucar', tipo:'Fibras', tag:'Cereal', price:15, },
     
-    { id:CerealCa, title:'Cereal de Caramelo', tipo:'Fibras', tag:'Cereal', N:'3',price:12, },
+    { id:3, img: CerealCa , title:'Cereal de Caramelo', tipo:'Fibras', tag:'Cereal', price:12, },
     
-    { id:FideoB, title:'Fideo Blanco', tipo:'Fibras', tag:'Fideo', N:'4',price:18.5 },
+    { id:4, img: FideoB ,title:'Fideo Blanco', tipo:'Fibras', tag:'Fideo', price:18.5 },
     
-    { id:FideoA, title:'Fideo Amarillo', tipo:'Fibras', tag:'Fideo', N:'5',price:18, },
+    { id:5, img: FideoA ,title:'Fideo Amarillo', tipo:'Fibras', tag:'Fideo', price:18, },
     
-    { id:FideoV, title:'Fideo Verde', tipo:'Fibras', tag:'Fideo', N:'6',price:18.4, },
+    { id:6, img: FideoV ,title:'Fideo Verde', tipo:'Fibras', tag:'Fideo', price:18.4, },
     
-    { id:Harina, title:'Harina', tipo:'Fibras', tag:'Harina', N:'7',price:8.00, },
+    { id:7, img: Harina ,title:'Harina', tipo:'Fibras', tag:'Harina', price:8.00, },
     
-    { id:Pans, title:'Pan Integral', tipo:'Fibras', tag:'Pan', N:'8',price:6.00, },
+    { id:8, img: Pans ,title:'Pan Integral', tipo:'Fibras', tag:'Pan', price:6.00, },
     
 ]

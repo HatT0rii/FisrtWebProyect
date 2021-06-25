@@ -30,18 +30,18 @@ function Fibras() {
                 </div>
                 <Fade bottom cascade>
                     <div className="container">
-                        {filteredImages.map(Fiber => (
-                            <div key={Fiber.N} className="image-card">
-                                <a href='#'>
-                                    <img loading='lazy' className="image" src={Fiber.id} alt={Fiber.title}/>
-                                </a>
+                        {filteredImages.map((Fiber) => (
+                            <div key={Fiber.id} className="image-card">
+                                
+                                    <img loading='lazy' className="image" src={Fiber.img} alt={Fiber.title}/>
+                                
                                 <div className='card-botton'>
                                     <div className='description'>
                                         <p>{Fiber.title}</p>
                                         <p>S/.{Fiber.price}</p>
                                     </div>
-                                    <div className='btn-shop'>
-                                        <button onClick={()=>addItem(Fiber.item)} ><i class="fas fa-shopping-bag"/> Comprar Ahora</button>
+                                    <div className='btn-shop'onClick={()=>addItem(Fiber)}>
+                                        <button><i class="fas fa-shopping-bag"/> Comprar Ahora</button>
                                     </div>
                                 </div>
                             </div>
